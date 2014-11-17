@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- CSS (load fondation) -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.4.7/css/foundation.min.css">
+    <style>
+        .navbar { border-radius:0; }
+    </style>
+
+    <!-- JS (load angular, ng-router, and our custom js file) -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="app.js"></script>
+    <style type="text/css">
+        .top-bar {
+          background: none repeat scroll 0% 0% rgba(0, 120, 160, 1);
+        }
+        .top-bar-section li:not(.has-form) a:not(.button) {
+          background: none repeat scroll 0% 0% rgba(0, 120, 160, 1);
+        }
+        .panel {
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<!-- apply our angular app to our site -->
+<body ng-app="routerApp">
+
+<!-- NAVIGATION -->
+<nav class="top-bar row">
+    <ul class="title-area">
+      <li class="name"></li> <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar"><a href="#"><span>Menu</span></a></li>
+    </ul> 
+    <section class="top-bar-section"> <!-- Right Nav Section -->    
+    <ul class="left">
+        <li><a href="#/home">Home</a></li>
+        <li><a href="#/about">About</a></li>
+        <li><a href="#/contact">Contact</a></li>
+    </ul>
+    </section>
+</nav>
+
+
+<!-- MAIN CONTENT -->
+<!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+<div class="row">
+    <div ng-view></div>
+</div>
+
+<div class="text-center">
+    <p>A tutorial by <a href="#">Ken Shoufer Web Design</a></p>
+</div>
+
+
+</body>
+</html>
